@@ -1,0 +1,27 @@
+{
+  "name": "api-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sls": "servless",
+    "dev": "node ./seed/runner.js && nodemon --exec \"sls offline start\"",
+    "seed": "node ./seed/runner.js",
+    "deploy": "serverless deploy --aws-profile serverless",
+    "package": "serverless package"
+  },
+  "keywords": [],
+  "author": "Lucas Pizzo",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "uuid4": "1.1.4",
+    "dotenv": "^7.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.421.0",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "serverless-offline": "^4.9.1"
+  }
+}
